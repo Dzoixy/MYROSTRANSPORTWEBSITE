@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ROS Transport Robot — โครงงานหุ่นยนต์ขนส่งอัตโนมัติภายในอาคาร พัฒนาโดยใช้ ROS 2, LiDAR และ ESP32 ห้องเรียนพิเศษวิทยาการคอมพิวเตอร์ โรงเรียนอนุกูลนารี">
+  <meta name="theme-color" content="#101b2b">
+  <title>ROS Transport Robot | โครงงานหุ่นยนต์ขนส่ง</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- ไม่มีแถบเมนูด้านบนตามที่ขอ: เริ่มหน้าเว็บจากเนื้อหาโครงงานทันที -->
+  <a class="skip-link" href="#overview">ข้ามไปยังเนื้อหา</a>
+  <main>
+    <section class="hero section-reveal" aria-labelledby="hero-title">
+      <div class="hero-grain" aria-hidden="true"></div>
+      <div class="hero-body container">
+        <div class="hero-copy">
+          <div class="hero-kicker"><span class="live-dot" aria-hidden="true"></span> COMPUTER SCIENCE PROJECT <span class="kicker-line"></span> 2568</div>
+          <h1 id="hero-title" class="hero-title"><span>ROS</span><span>TRANSPORT</span><span class="hero-outline">ROBOT<span class="hero-period">.</span></span></h1>
+          <p class="hero-thai">หุ่นยนต์ขนส่งอัตโนมัติ<br><span>สำหรับการใช้งานภายในอาคาร</span></p>
+          <p class="hero-description">จากการออกแบบต้นแบบ สู่ระบบรับรู้สภาพแวดล้อม สร้างแผนที่ และนำทางด้วยเทคโนโลยี ROS 2</p>
+          <div class="hero-tags" aria-label="เทคโนโลยีหลัก"><span>ROS 2</span><span>LiDAR</span><span>ESP32</span><span>SLAM</span></div>
+          <div class="hero-actions">
+            <a class="button button-light" href="#overview">สำรวจโครงงาน <span aria-hidden="true">↗</span></a>
+            <a class="button button-transparent" href="documents/ros-transport-report.pdf" target="_blank" rel="noopener">อ่านรายงาน <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="visual-corner visual-corner-one" aria-hidden="true"></div>
+          <div class="visual-corner visual-corner-two" aria-hidden="true"></div>
+          <img src="assets/robot-render.webp" alt="ภาพโมเดลสามมิติของหุ่นยนต์ขนส่ง ROS Transport Robot ที่ออกแบบใน Blender" width="1680" height="945" fetchpriority="high">
+          <div class="hero-visual-label"><span class="small-dot" aria-hidden="true"></span> 3D DESIGN / ROBOT PROTOTYPE <span class="label-seq">FIG. 01</span></div>
+        </div>
+      </div>
+      <div class="hero-bottom container"><span>ANUKOOLNAREE SCHOOL <span class="muted-slash">/</span> COMPUTER SCIENCE</span><a href="#overview">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
+    </section>
+
+    <section class="fact-band container section-reveal" aria-label="ข้อมูลโครงการโดยสรุป">
+      <div class="fact"><span class="fact-index">01 / PROJECT</span><strong>Indoor Delivery</strong><span>หุ่นยนต์ขนส่งภายในอาคาร</span></div>
+      <div class="fact"><span class="fact-index">02 / FRAMEWORK</span><strong>ROS 2</strong><span>ระบบควบคุมและการนำทาง</span></div>
+      <div class="fact"><span class="fact-index">03 / PERCEPTION</span><strong>LiDAR + SLAM</strong><span>รับรู้สภาพแวดล้อมและสร้างแผนที่</span></div>
+      <div class="fact"><span class="fact-index">04 / INSTITUTION</span><strong>ANR · CS</strong><span>โรงเรียนอนุกูลนารี</span></div>
+    </section>
+
+    <section class="section intro container section-reveal" id="overview">
+      <div class="section-heading"><span class="eyebrow">01 <i></i> ABOUT THE PROJECT</span><h2>เมื่อการขนส่ง<br>ไม่จำเป็นต้องใช้แรงคน<span class="accent-dot">.</span></h2></div>
+      <div class="intro-main">
+        <div class="intro-text"><p class="lead">ROS Transport Robot คือโครงงานออกแบบและพัฒนาหุ่นยนต์ขนส่งสิ่งของภายในอาคาร โดยประยุกต์ใช้ระบบ ROS ในการควบคุมหุ่นยนต์และนำทางไปยังตำแหน่งที่กำหนด</p><p>โครงการมุ่งศึกษาการเคลื่อนที่อัตโนมัติ การตรวจจับสิ่งกีดขวาง และการสร้างแผนที่ เพื่อเป็นต้นแบบสำหรับลดภาระงานขนส่งและพัฒนาต่อยอดในอนาคต</p><div class="info-note"><span class="note-sign">↗</span><span>ขอบเขตที่ศึกษาเน้นพื้นที่ภายในอาคาร ไม่ครอบคลุมพื้นขรุขระ พื้นต่างระดับ หรือพื้นที่กลางแจ้ง</span></div></div>
+        <div class="objectives"><h3>วัตถุประสงค์ของโครงงาน</h3><div class="objective"><span>01</span><p>ศึกษาและพัฒนาหุ่นยนต์เพื่อช่วยขนส่งสิ่งของภายในอาคาร</p></div><div class="objective"><span>02</span><p>ออกแบบและสร้างหุ่นยนต์ที่เคลื่อนที่และขนส่งสิ่งของได้อย่างมีประสิทธิภาพ เพื่อลดภาระแรงงานมนุษย์</p></div><div class="objective"><span>03</span><p>ศึกษาการทำงานของ Robot Operating System และการนำมาประยุกต์ใช้กับหุ่นยนต์ขนส่ง</p></div></div>
+      </div>
+    </section>
+
+    <section class="section tech-section" id="technology">
+      <div class="container section-reveal"><div class="section-heading compact"><span class="eyebrow">02 <i></i> TECHNOLOGY STACK</span><div class="two-part-heading"><h2>เทคโนโลยี<br>เบื้องหลังการเคลื่อนที่<span class="accent-dot">.</span></h2><p>การประสานงานระหว่างฮาร์ดแวร์ ระบบปฏิบัติการ และซอฟต์แวร์เพื่อสร้างระบบหุ่นยนต์ต้นแบบ</p></div></div>
+      <div class="tech-grid">
+        <article class="tech-card featured-tech"><span class="card-no">CORE / 01</span><div class="tech-big-icon" aria-hidden="true">ROS<span>2</span></div><h3>ROS 2 + Ubuntu 22.04</h3><p>ใช้จัดการองค์ประกอบของระบบหุ่นยนต์ การรับส่งข้อมูลระหว่างส่วนต่าง ๆ และการทำงานด้านการนำทาง</p><span class="card-foot">SOFTWARE / ROBOT FRAMEWORK</span></article>
+        <article class="tech-card"><span class="card-no">SENSOR / 02</span><div class="tech-symbol" aria-hidden="true"><svg viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="11" stroke="currentColor" stroke-width="2"/><path d="M40 7a33 33 0 0 1 33 33M40 16a24 24 0 0 1 24 24M40 73A33 33 0 0 1 7 40M40 64a24 24 0 0 1-24-24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="40" cy="40" r="3" fill="currentColor"/></svg></div><h3>YDLIDAR X3</h3><p>สแกนระยะและตรวจจับข้อมูลสภาพแวดล้อม เพื่อใช้สร้างแผนที่และช่วยระบุสิ่งกีดขวาง</p><span class="card-foot">PERCEPTION / LiDAR</span></article>
+        <article class="tech-card"><span class="card-no">CONTROL / 03</span><div class="tech-symbol chip-symbol" aria-hidden="true"><svg viewBox="0 0 80 80" fill="none"><rect x="20" y="20" width="40" height="40" rx="7" stroke="currentColor" stroke-width="2"/><rect x="29" y="29" width="22" height="22" rx="3" stroke="currentColor" stroke-width="2"/><path d="M28 10v10m12-10v10m12-10v10M28 60v10m12-10V60m12 0v10M10 28h10M10 40h10M10 52h10m40-24h10M60 40h10M60 52h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>ESP32 + Motor Driver</h3><p>ใช้ควบคุมชุดมอเตอร์ผ่าน L298N ร่วมกับ Motor Encoder เพื่อจัดการการเคลื่อนที่ของหุ่นยนต์</p><span class="card-foot">HARDWARE / MOTOR CONTROL</span></article>
+        <article class="tech-card"><span class="card-no">COMPUTE / 04</span><div class="tech-symbol" aria-hidden="true"><svg viewBox="0 0 80 80" fill="none"><rect x="13" y="22" width="54" height="36" rx="4" stroke="currentColor" stroke-width="2"/><rect x="20" y="29" width="24" height="22" rx="2" stroke="currentColor" stroke-width="2"/><path d="M51 32h9m-9 8h9m-9 8h9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="40" cy="40" r="4" fill="currentColor"/></svg></div><h3>NVIDIA Jetson Nano</h3><p>คอมพิวเตอร์ประมวลผลหลักของต้นแบบ เชื่อมต่อกับระบบ ROS และอุปกรณ์รับข้อมูลจากเซนเซอร์</p><span class="card-foot">COMPUTING / EMBEDDED</span></article>
+      </div>
+      <p class="stack-note">เครื่องมือพัฒนาเพิ่มเติม: PlatformIO, Visual Studio Code, NoMachine และ Blender</p>
+      </div>
+    </section>
+
+
+    <section class="section component-section" id="components" aria-labelledby="components-title">
+      <div class="container section-reveal">
+        <div class="component-heading"><span class="eyebrow">02B <i></i> HARDWARE &amp; SOFTWARE</span><h2 id="components-title">การขับเคลื่อน<span class="accent-dot">.</span></h2><p>อุปกรณ์และซอฟต์แวร์ที่ใช้พัฒนา ROS Transport Robot — ภาพประกอบจากสไลด์โครงงาน</p></div>
+        <div class="component-tabs" role="tablist" aria-label="เลือกหมวดอุปกรณ์และโปรแกรม">
+          <button class="component-tab active" type="button" role="tab" id="tab-hardware" aria-controls="panel-hardware" aria-selected="true" tabindex="0" data-component-tab="hardware">HARDWARE <span>06</span></button>
+          <button class="component-tab" type="button" role="tab" id="tab-software" aria-controls="panel-software" aria-selected="false" tabindex="-1" data-component-tab="software">SOFTWARE <span>06</span></button>
+        </div>
+        <div id="panel-hardware" role="tabpanel" aria-labelledby="tab-hardware" class="component-panel" tabindex="0">
+          <div class="component-grid">
+<article class="component-card">
+          <div class="component-photo"><img src="assets/component-jetson-nano.webp" alt="ภาพประกอบ NVIDIA Jetson Nano จากสไลด์โครงงาน" loading="lazy" decoding="async"></div>
+          <span class="component-code">HW / 01</span>
+          <h3>NVIDIA Jetson Nano</h3>
+          <p>บอร์ดประมวลผลหลักสำหรับระบบ ROS ตามรายการอุปกรณ์ในโครงงาน</p>
+          <span class="component-foot">MAIN PROCESSING BOARD</span>
+        </article>
+<article class="component-card">
+          <div class="component-photo"><img src="assets/component-ydlidar-x3.webp" alt="ภาพประกอบ YDLIDAR X3 จากสไลด์โครงงาน" loading="lazy" decoding="async"></div>
+          <span class="component-code">HW / 02</span>
+          <h3>YDLIDAR X3</h3>
+          <p>เซนเซอร์ตรวจวัดระยะเพื่อสร้างแผนที่และรับรู้สิ่งกีดขวาง</p>
+          <span class="component-foot">LASER DISTANCE SENSOR</span>
+        </article>
+<article class="component-card">
+          <div class="component-photo"><img src="assets/component-motor-encoder.webp" alt="ภาพประกอบ Motor Encoder จากสไลด์โครงงาน" loading="lazy" decoding="async"></div>
+          <span class="component-code">HW / 03</span>
+          <h3>Motor Encoder</h3>
+          <p>อ่านการหมุนของมอเตอร์เพื่อใช้ติดตามการเคลื่อนที่</p>
+          <span class="component-foot">MOTION FEEDBACK</span>
+        </article>
+<article class="component-card">
+          <div class="component-photo"><img src="assets/component-esp32.webp" alt="ภาพประกอบ ESP32 จากสไลด์โครงงาน" loading="lazy" decoding="async"></div>
+          <span class="component-code">HW / 04</span>
+          <h3>ESP32</h3>
+          <p>ไมโครคอนโทรลเลอร์สำหรับงานควบคุมการเคลื่อนที่</p>
+          <span class="component-foot">MICROCONTROLLER</span>
+        </article>
+<article class="component-card">
+          <div class="component-photo"><img src="assets/component-l298n-driver.webp" alt="ภาพประกอบ L298N Motor Driver จากสไลด์โครงงาน" loading="lazy" decoding="async"></div>
+          <span class="component-code">HW / 05</span>
+          <h3>L298N Motor Driver</h3>
+          <p>วงจรขับมอเตอร์สำหรับรับคำสั่งควบคุมการหมุน</p>
+          <span class="component-foot">MOTOR DRIVER</span>
+        </article>
+<article class="component-card">
+          <div class="component-photo"><img src="assets/component-battery.webp" alt="ภาพประกอบ Battery จากสไลด์โครงงาน" loading="lazy" decoding="async"></div>
+          <span class="component-code">HW / 06</span>
+          <h3>Battery</h3>
+          <p>แหล่งจ่ายพลังงานให้กับส่วนประมวลผลและระบบเคลื่อนที่</p>
+          <span class="component-foot">POWER SOURCE</span>
+        </article>
+          </div>
+        </div>
+        <div id="panel-software" role="tabpanel" aria-labelledby="tab-software" class="component-panel" tabindex="0" hidden>
+          <div class="component-grid">
+<article class="component-card">
+          <div class="component-photo"><img src="assets/component-ubuntu.webp" alt="ภาพประกอบ Ubuntu 22.04 จากสไลด์โครงงาน" loading="lazy" decoding="async"></div>
+          <span class="component-code">SW / 01</span>
+          <h3>Ubuntu 22.04</h3>
+          <p>ระบบปฏิบัติการหลักสำหรับติดตั้งและใช้งาน ROS</p>
+          <span class="component-foot">OPERATING SYSTEM</span>
+        </article>
+<article class="component-card">
+          <div class="component-photo"><img src="assets/component-ros2.webp" alt="ภาพประกอบ ROS 2 จากสไลด์โครงงาน" loading="lazy" decoding="async"></div>
+          <span class="component-code">SW / 02</span>
+          <h3>ROS 2</h3>
+          <p>เฟรมเวิร์กสำหรับการสื่อสาร การควบคุม และระบบนำทางของหุ่นยนต์</p>
+          <span class="component-foot">ROBOT FRAMEWORK</span>
+        </article>
+<article class="component-card">
+          <div class="component-photo"><img src="assets/component-vscode.webp" alt="ภาพประกอบ Visual Studio Code จากสไลด์โครงงาน" loading="lazy" decoding="async"></div>
+          <span class="component-code">SW / 03</span>
+          <h3>Visual Studio Code</h3>
+          <p>โปรแกรมแก้ไขโค้ดและพัฒนาซอฟต์แวร์ของโครงงาน</p>
+          <span class="component-foot">CODE EDITOR</span>
+        </article>
+<article class="component-card">
+          <div class="component-photo"><img src="assets/component-platformio.webp" alt="ภาพประกอบ PlatformIO จากสไลด์โครงงาน" loading="lazy" decoding="async"></div>
+          <span class="component-code">SW / 04</span>
+          <h3>PlatformIO</h3>
+          <p>เครื่องมือพัฒนาและอัปโหลดโปรแกรมไปยังไมโครคอนโทรลเลอร์</p>
+          <span class="component-foot">EMBEDDED DEVELOPMENT</span>
+        </article>
+<article class="component-card">
+          <div class="component-photo"><img src="assets/component-nomachine.webp" alt="ภาพประกอบ NoMachine จากสไลด์โครงงาน" loading="lazy" decoding="async"></div>
+          <span class="component-code">SW / 05</span>
+          <h3>NoMachine</h3>
+          <p>โปรแกรมเชื่อมต่อคอมพิวเตอร์ระยะไกลผ่านเครือข่าย</p>
+          <span class="component-foot">REMOTE DESKTOP</span>
+        </article>
+<article class="component-card">
+          <div class="component-photo"><img src="assets/component-blender.webp" alt="ภาพประกอบ Blender จากสไลด์โครงงาน" loading="lazy" decoding="async"></div>
+          <span class="component-code">SW / 06</span>
+          <h3>Blender</h3>
+          <p>โปรแกรมออกแบบและสร้างโมเดลโครงสร้างหุ่นยนต์สามมิติ</p>
+          <span class="component-foot">3D MODELING</span>
+        </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section workflow container section-reveal" id="workflow">
+      <div class="section-heading compact"><span class="eyebrow">03 <i></i> HOW IT WORKS</span><div class="two-part-heading"><h2>จากข้อมูลรอบตัว<br>สู่การเคลื่อนที่<span class="accent-dot">.</span></h2><p>ลำดับหลักการทำงานตามที่อธิบายในรายงานและสไลด์โครงงาน</p></div></div>
+      <div class="flow-grid" aria-label="ขั้นตอนการทำงานของ ROS Transport Robot">
+        <div class="flow-step"><span class="step-number">01</span><div class="flow-glyph">◎</div><h3>LiDAR Scan</h3><p>สแกนระยะและตรวจจับวัตถุรอบตัว</p></div>
+        <div class="flow-step"><span class="step-number">02</span><div class="flow-glyph">▦</div><h3>SLAM & Map</h3><p>ประมวลผลข้อมูลเพื่อสร้างแผนที่</p></div>
+        <div class="flow-step"><span class="step-number">03</span><div class="flow-glyph">⌖</div><h3>Localization</h3><p>ประเมินตำแหน่งของหุ่นยนต์</p></div>
+        <div class="flow-step"><span class="step-number">04</span><div class="flow-glyph">↗</div><h3>Navigation</h3><p>วางเส้นทางไปยังเป้าหมายและหลีกเลี่ยงสิ่งกีดขวาง</p></div>
+        <div class="flow-step"><span class="step-number">05</span><div class="flow-glyph">⚙</div><h3>Motor Control</h3><p>ส่งคำสั่งควบคุมการเคลื่อนที่ผ่านระบบควบคุมมอเตอร์</p></div>
+      </div>
+      <div class="evidence-panels"><figure class="evidence-card image-action" data-full="assets/rviz-map.webp" data-title="แผนที่จากโปรแกรม RViz" tabindex="0" role="button" aria-label="ขยายภาพแผนที่ RViz"><img src="assets/rviz-map.webp" width="1631" height="917" alt="หน้าจอ RViz แสดงแผนที่สภาพแวดล้อมที่เก็บจากหุ่นยนต์" loading="lazy"><figcaption><span>FIG. 02 / MAPPING</span><strong>การแสดงผลแผนที่ใน RViz</strong><span>คลิกเพื่อขยายภาพ ↗</span></figcaption></figure><figure class="evidence-card image-action" data-full="assets/hardware-diagram.webp" data-title="แผนผังการเชื่อมต่อฮาร์ดแวร์" tabindex="0" role="button" aria-label="ขยายภาพผังฮาร์ดแวร์"><img src="assets/hardware-diagram.webp" width="1680" height="945" alt="แผนผังฮาร์ดแวร์ของหุ่นยนต์ขนส่ง" loading="lazy"><figcaption><span>FIG. 03 / SYSTEM</span><strong>แผนผังการเชื่อมต่อฮาร์ดแวร์</strong><span>คลิกเพื่อขยายภาพ ↗</span></figcaption></figure></div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="container section-reveal"><div class="section-heading compact"><span class="eyebrow">04 <i></i> PROJECT GALLERY</span><div class="two-part-heading"><h2>เบื้องหลัง<br>ROS Transport Robot<span class="accent-dot">.</span></h2><p>ภาพจากเอกสารรายงานและสไลด์โครงงาน ทั้งการออกแบบ การทดสอบ และการนำเสนอผลงาน</p></div></div>
+      <div class="gallery-filters" role="group" aria-label="กรองรูปภาพ"><button class="gallery-filter active" type="button" data-filter="all" aria-pressed="true">ทั้งหมด <span>09</span></button><button class="gallery-filter" type="button" data-filter="design" aria-pressed="false">การออกแบบ</button><button class="gallery-filter" type="button" data-filter="software" aria-pressed="false">ระบบและโปรแกรม</button><button class="gallery-filter" type="button" data-filter="real" aria-pressed="false">ภาพการทำงานจริง</button></div>
+      <div class="gallery-grid" id="gallery-grid">
+        <figure class="gallery-item gallery-item-wide image-action" data-category="design" data-full="assets/robot-render.webp" data-title="ภาพออกแบบหุ่นยนต์ 3D" tabindex="0" role="button"><img src="assets/robot-render.webp" alt="ภาพเรนเดอร์โมเดลหุ่นยนต์ขนส่ง 3 มิติ" loading="lazy"><figcaption><span>01 / DESIGN</span><strong>ภาพเรนเดอร์โมเดลหุ่นยนต์</strong><span>↗</span></figcaption></figure>
+        <figure class="gallery-item image-action" data-category="real" data-full="assets/workshop-23-4.webp" data-title="โครงสร้างและอุปกรณ์หุ่นยนต์" tabindex="0" role="button"><img src="assets/workshop-23-4.webp" alt="ภาพถ่ายส่วนบนและอุปกรณ์ของหุ่นยนต์ขนส่ง" loading="lazy"><figcaption><span>02 / PROTOTYPE</span><strong>ต้นแบบหุ่นยนต์</strong><span>↗</span></figcaption></figure>
+        <figure class="gallery-item image-action" data-category="software" data-full="assets/lidar-scan.webp" data-title="LiDAR Scan บน RViz" tabindex="0" role="button"><img src="assets/lidar-scan.webp" alt="หน้าจอ RViz แสดงจุดที่ตรวจวัดจาก LiDAR" loading="lazy"><figcaption><span>03 / SENSOR</span><strong>การสแกนด้วย LiDAR</strong><span>↗</span></figcaption></figure>
+        <figure class="gallery-item image-action" data-category="software" data-full="assets/ros-code.webp" data-title="การพัฒนาโปรแกรมควบคุม" tabindex="0" role="button"><img src="assets/ros-code.webp" alt="การเขียนโปรแกรม ROS ใน Visual Studio Code" loading="lazy"><figcaption><span>04 / DEVELOPMENT</span><strong>โค้ดระบบ ROS</strong><span>↗</span></figcaption></figure>
+        <figure class="gallery-item image-action" data-category="design" data-full="assets/robot-blender.webp" data-title="โมเดลต้นแบบใน Blender" tabindex="0" role="button"><img src="assets/robot-blender.webp" alt="การสร้างโมเดลสามมิติของหุ่นยนต์ภายในโปรแกรม Blender" loading="lazy"><figcaption><span>05 / 3D MODEL</span><strong>ออกแบบด้วย Blender</strong><span>↗</span></figcaption></figure>
+        <figure class="gallery-item image-action" data-category="real" data-full="assets/workshop-22-1.webp" data-title="ประกอบและตรวจสอบตัวหุ่นยนต์" tabindex="0" role="button"><img src="assets/workshop-22-1.webp" alt="ผู้พัฒนาโครงงานกำลังประกอบและตรวจสอบหุ่นยนต์" loading="lazy"><figcaption><span>06 / BUILD</span><strong>ขั้นตอนประกอบตัวหุ่นยนต์</strong><span>↗</span></figcaption></figure>
+        <figure class="gallery-item gallery-item-wide image-action" data-category="real" data-full="assets/project-demo-01.webp" data-title="นำเสนอโครงงานภายในโรงเรียน" tabindex="0" role="button"><img src="assets/project-demo-01.webp" alt="บรรยากาศการนำเสนอโครงงานหุ่นยนต์ขนส่งต่อผู้เข้าชม" loading="lazy"><figcaption><span>07 / SHOWCASE</span><strong>การจัดแสดงและนำเสนอผลงาน</strong><span>↗</span></figcaption></figure>
+        <figure class="gallery-item image-action" data-category="software" data-full="assets/rviz-map.webp" data-title="แผนที่จาก RViz" tabindex="0" role="button"><img src="assets/rviz-map.webp" alt="การสร้างแผนที่ในโปรแกรม RViz" loading="lazy"><figcaption><span>08 / NAVIGATION</span><strong>แผนที่สำหรับนำทาง</strong><span>↗</span></figcaption></figure>
+        <figure class="gallery-item image-action" data-category="real" data-full="assets/project-demo-02.webp" data-title="บรรยากาศนำเสนอโครงงาน" tabindex="0" role="button"><img src="assets/project-demo-02.webp" alt="ผู้พัฒนาและผู้ชมในงานนำเสนอโครงงาน ROS Transport Robot" loading="lazy"><figcaption><span>09 / EXHIBITION</span><strong>กิจกรรมนำเสนอผลงาน</strong><span>↗</span></figcaption></figure>
+      </div><p class="gallery-hint">* สามารถเพิ่มรูปภาพใหม่ในหมวดหมู่นี้ได้ โดยทำตาม README ที่แนบมากับชุดเว็บไซต์</p></div>
+    </section>
+
+    <section class="section results container section-reveal" id="results"><div class="section-heading compact"><span class="eyebrow">05 <i></i> RESULTS & NEXT STEPS</span><h2>ผลการพัฒนา<br>และแนวทางต่อยอด<span class="accent-dot">.</span></h2></div><div class="results-grid"><div class="results-copy"><div class="result-tag">PROJECT OUTCOME</div><p>ตามรายงานฉบับสมบูรณ์ ต้นแบบสามารถรับคำสั่งควบคุมการเคลื่อนที่ ตรวจจับสภาพแวดล้อม และเคลื่อนที่ขนส่งสิ่งของไปยังจุดที่กำหนดได้</p><p class="small-paragraph">รายงานยังระบุข้อจำกัดเรื่องความเร็วที่เหมาะสมกับพื้นที่ และการนำทางในสภาพแวดล้อมที่ซับซ้อน ซึ่งเป็นโจทย์สำคัญสำหรับการพัฒนาต่อไป</p><a href="documents/ros-transport-report.pdf" target="_blank" rel="noopener" class="text-arrow">ดูผลการทดลองในรายงานฉบับเต็ม <span>↗</span></a></div><div class="improvements"><h3>NEXT ITERATION</h3><div><span>01</span>เพิ่มความแม่นยำและความรวดเร็วในการเคลื่อนที่</div><div><span>02</span>ปรับปรุงระบบหลีกเลี่ยงสิ่งกีดขวาง</div><div><span>03</span>เสริมความแข็งแรงและความทนทานของโครงสร้าง</div><div><span>04</span>เพิ่มความปลอดภัยและเสถียรภาพของระบบ</div><div><span>05</span>พัฒนาให้รองรับน้ำหนักขนส่งที่มากขึ้น</div></div></div></section>
+
+    <section class="section poster-section" id="poster"><div class="container poster-layout section-reveal"><div class="poster-description"><span class="eyebrow">06 <i></i> PROJECT POSTER</span><h2>หนึ่งหน้าที่เล่า<br>ทั้งโครงงาน<span class="accent-dot">.</span></h2><p>โปสเตอร์สรุปที่มา วัตถุประสงค์ อุปกรณ์ การทำงาน ภาพประกอบ และผลสรุปของ ROS Transport Robot</p><a class="button button-dark" href="documents/ros-transport-poster.png" target="_blank" rel="noopener">เปิดดูโปสเตอร์เต็มขนาด <span>↗</span></a><span class="poster-side-note">POSTER / 2025–2026 ACADEMIC PROJECT</span></div><figure class="poster-display image-action" data-full="documents/ros-transport-poster.png" data-title="โปสเตอร์โครงงาน ROS Transport Robot" tabindex="0" role="button" aria-label="ขยายโปสเตอร์โครงงาน"><img src="assets/poster-preview.webp" width="1447" height="2048" alt="โปสเตอร์สรุปโครงงานวิทยาการคอมพิวเตอร์ ROS Transport Robot" loading="lazy"><figcaption>ดูโปสเตอร์ฉบับเต็ม ↗</figcaption></figure></div></section>
+
+    <section class="section resources container section-reveal" id="documents"><div class="section-heading compact"><span class="eyebrow">07 <i></i> PROJECT DOCUMENTS</span><h2>เอกสารประกอบ<br>โครงงาน<span class="accent-dot">.</span></h2></div><div class="document-list"><a class="document-card" href="documents/ros-transport-report.pdf" target="_blank" rel="noopener"><span class="file-kind">PDF<br>25 PAGES</span><span class="file-title"><strong>รายงานโครงงานฉบับสมบูรณ์</strong><small>บทนำ • ทฤษฎีที่เกี่ยวข้อง • วิธีดำเนินงาน • ผลการทดลอง</small></span><span class="document-arrow">↗</span></a><a class="document-card" href="documents/ros-transport-slides.pdf" target="_blank" rel="noopener"><span class="file-kind">PDF<br>17 SLIDES</span><span class="file-title"><strong>สไลด์นำเสนอ ROS Transport Robot</strong><small>อุปกรณ์ • ซอฟต์แวร์ • แผนภาพ • ภาพการทดลอง</small></span><span class="document-arrow">↗</span></a><a class="document-card" href="documents/ros-transport-poster.png" target="_blank" rel="noopener"><span class="file-kind">PNG<br>POSTER</span><span class="file-title"><strong>โปสเตอร์สรุปโครงงาน</strong><small>ภาพรวมโครงการพร้อมภาพผังระบบและภาพประกอบ</small></span><span class="document-arrow">↗</span></a></div></section>
+
+    <footer class="footer"><div class="container footer-content"><div class="footer-brand"><span class="brand-mark">ROS<span>.</span></span><p>TRANSPORT ROBOT<br><span>หุ่นยนต์ขนส่งอัตโนมัติภายในอาคาร</span></p></div><div class="footer-about"><span>จัดทำโดย</span><p>สิทธิชัย แสนสุธา<br>เนติภัทร เปี่ยมทอง<br>ฐิติภัทรา จำปาสิม</p></div><div class="footer-about"><span>สังกัด</span><p>ห้องเรียนพิเศษวิทยาการคอมพิวเตอร์<br>โรงเรียนอนุกูลนารี<br>ปีการศึกษา 2568</p></div></div><div class="container footer-bottom"><span>© ROS TRANSPORT ROBOT — PROJECT SHOWCASE</span><a href="#hero-title">กลับขึ้นด้านบน ↑</a></div></footer>
+  </main>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="รูปภาพขยาย" aria-hidden="true"><button type="button" class="lightbox-close" id="lightbox-close" aria-label="ปิดรูปภาพ">✕</button><img id="lightbox-image" alt=""><div class="lightbox-caption" id="lightbox-caption"></div></div>
+</body>
+</html>
